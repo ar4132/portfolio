@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>yanolja Mykit</title> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<link rel="apple-touch-icon" href="이미지경로.png" />
+	<link rel="stylesheet" type="text/css" href="./css/default.css" />
+	<link rel="stylesheet" type="text/css" href="./css/sprite.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body id="myKit">
+	<!-- S : #skip navigation  --> 
+	<div id="skip_nav" ><a href="#content">본문 바로가기</a></div> 
+	<!-- E : #skip navigation --> 
+	<!-- S: #mykit_wrap -->
+	<div id="mykit_wrap">		
+		<!-- S: #wrap -->
+		<div id="wrap" class="fixed">
+			<!-- S: #header -->
+			<header id="header" class="">
+				<div class="inner">	
+					<h1><a href="#none" class="btn h_title"><span>정보 동의</span></a></h1>
+					<button type="button" class="btn btn_h_right"><span></span></button>
+				</div>
+			</header><!-- E: #header -->
+			<!-- S: #container -->
+			<div id="container" class="" >
+				<!-- S: #content -->
+				<section id="content">
+					<div class="txt_rap">
+						<p>MY KIT 평가가 완료되면,<br>추첨을 통하여 추가 제품을 드립니다.</p>
+					</div>
+					<div class="form_rap m_type">
+						<div class="btn_rap gender">
+							<div class="btn_inner">
+								<ul class="type2">
+									<li><input type="radio" id="gender1" name="gender"><label class="btn type2" for="gender1">남자</label></li>
+									<li><input type="radio" id="gender2" name="gender"><label class="btn type2" for="gender2">여자</label></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="input_rap">
+							<div class="input_inner">
+								<input type="tel" placeholder="나이 입력" />
+							</div>
+						</div>
+					</div>
+					<div class="form_rap">
+						<div class="input_rap">
+							<ul>
+								<li><input type="text" placeholder="우편번호"><button type="button" class="btn_search" onclick="execDaumPostcode()"></button></li>
+								<li><input type="text" placeholder="기본주소 입력"></li>
+								<li><input type="text" placeholder="상세주소 입력"></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="form_rap">
+						<div class="form_inner">
+							<input type="tel" placeholder="전화번호 입력" />
+ 						</div>					
+					</div>
+					<div class="cont_inner">
+						<div class="btn_rap">
+							<a href="" class="btn type1" target="_blank">네, 동의합니다</a>
+						</div>
+						<div class="txt_rap m_type">
+							본 정보 동의는 MY KIT의 평가에 이용되며 제품을<br>추가로 받기를 원하는 경우 제3자에게 제공되며,<br>이벤트 외의 목적으로 이용되지 않습니다.
+						</div>
+					</div>
+				</section><!-- E: #content -->
+			</div><!-- E:#container -->
+			<script>
+			</script>
+
+
+<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch; background:#fff">
+	<span id="btnCloseLayer" onclick="closeDaumPostcode()">X</span>
+</div>
+
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+    // 우편번호 찾기 화면을 넣을 element
+    var element_layer = document.getElementById('layer');
+
+    function closeDaumPostcode() {
+        // iframe을 넣은 element를 안보이게 한다.
+        element_layer.style.display = 'none';
+    }
+
+    function execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = data.address; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 기본 주소가 도로명 타입일때 조합한다.
+                if(data.addressType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('userZip').value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById('userAddress').value = fullAddr;
+
+				// 커서를 상세주소 필드로 이동한다.
+                document.getElementById('userAddressDetail').focus();
+
+                // iframe을 넣은 element를 안보이게 한다.
+                // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+                element_layer.style.display = 'none';
+            },
+            width : '100%',
+            height : '100%'
+        }).embed(element_layer);
+
+        // iframe을 넣은 element를 보이게 한다.
+        element_layer.style.display = 'block';
+
+        // iframe을 넣은 element의 위치를 화면의 가운데로 이동시킨다.
+        initLayerPosition();
+    }
+
+    // 브라우저의 크기 변경에 따라 레이어를 가운데로 이동시키고자 하실때에는
+    // resize이벤트나, orientationchange이벤트를 이용하여 값이 변경될때마다 아래 함수를 실행 시켜 주시거나,
+    // 직접 element_layer의 top,left값을 수정해 주시면 됩니다.
+    function initLayerPosition(){
+        var width = 300; //우편번호서비스가 들어갈 element의 width
+        var height = 460; //우편번호서비스가 들어갈 element의 height
+        var borderWidth = 5; //샘플에서 사용하는 border의 두께
+
+        // 위에서 선언한 값들을 실제 element에 넣는다.
+        element_layer.style.width = width + 'px';
+        element_layer.style.height = height + 'px';
+        element_layer.style.border = borderWidth + 'px solid';
+        // 실행되는 순간의 화면 너비와 높이 값을 가져와서 중앙에 뜰 수 있도록 위치를 계산한다.
+        element_layer.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width)/2 - borderWidth) + 'px';
+        element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
+    }
+</script>
+
+
+
+
+
+
+
+
+
+		</div><!-- E: #wrap -->		
+		<div class="sc_dim"></div><!-- E: .sc_dim -->	
+	</div><!-- E: #mykit_wrap -->
+	<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script>
+		
+
+	
+	$(document).ready(function(){
+		$('button.btn_search').click(function(){
+			$('#mykit_wrap').addClass('on');	
+		});
+	});
+	
+	</script>
+
+</body>
+</html>

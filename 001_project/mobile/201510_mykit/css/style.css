@@ -1,0 +1,172 @@
+@charset "utf-8"; 
+
+
+/* Layout Style
+****************************************************************************************/
+#mykit_wrap.on { overflow:hidden }
+#mykit_wrap { position:relative; }
+
+/*header*/
+#mykit_wrap.on #header { position:static }
+#header { display:block; position:fixed; top:0; left:0; width:100%; height:48px; background:rgba(255,255,255,.9); z-index:999 }
+#header .inner { display:block; position:relative; height:47px; padding:0 45px; border-bottom:solid 1px #f1f1f1 }
+#header .inner h1 { display:block; width:100% }
+#header .inner .btn { display:block; text-align:center }
+#header .inner .btn_h_left,
+#header .inner .btn_h_right { display:block; position:absolute; top:0; height:47px; background:none }
+#header .inner .btn_h_left { left:0 }
+#header .inner .btn_h_right { right:0 }
+#header .inner .h_title span { display:block; padding:16px 0 14px 0; line-height:18px; font-size:18px; color:#ff5e80; vertical-align:middle }
+#header .inner .btn_h_left span { display:inline-block; width:30px; height:47px; margin-left:15px; background:url("http://img.yanoljanow.com/img/mykit/ico_h_back.png")no-repeat left 50%; background-size:18px 13px }
+#header .inner .btn_h_right span { display:block; width:30px; height:47px; padding-right:15px; background:url("http://img.yanoljanow.com/img/mykit/ico_h_close.png")no-repeat 15px 50%; background-size:13px 13px }
+
+/*footer*/
+#footer { display:block; padding:18px 12px 26px 12px; font-size:10px; color:#a0a0a0; text-align:center; background:#f1f1f1 }
+#footer .inner { position:relative; }
+#footer .inner ul {}
+#footer .inner li { display:inline-block; *display:inline; *zoom:1; padding:0 8px 0 12px; background:url("http://img.yanoljanow.com/img/mykit/blit_f_bar.png") no-repeat left 1px; background-size:1px 10px }
+#footer .inner li:first-child { padding-left:0; background:none }
+#footer .inner li:last-child { padding-right:0 }
+#footer .inner li a { display:block; font-size:11px; color:#7c7c7c; font-weight:bold; letter-spacing:-1px }
+#footer .inner p { margin-top:14px; line-height:13px; color:#a0a0a0; letter-spacing:-0.8px; font-weight:normal }
+#footer .inner p.keycolor { margin:0; color:#ff5e80 }
+#footer .inner p a { text-decoration:underline }
+
+/*container*/
+#container { position:relative; margin-top:48px }
+#mykit_wrap.on #container { margin-top:0 }
+
+#content { text-align:center }
+.cont_inner { display:block; padding:0 10px 35px 10px }
+.cont_inner:first-child { padding-bottom:0 }
+.main_visual { display:block; width:100%; height:100% }
+
+/*이미지 스타일 & 리스트 이미지*/
+.img_rap { display:block; padding-top:30px }
+.img_rap .img_inner { position:relative; display:block; width:100%; height:100% }
+.img_rap img { width:100%; -webkit-border-radius:50%; border-radius:50% }
+
+/*텍스트 스타일*/
+.txt_rap { padding:30px 5px 0 5px; font-size:12px; color:#aaa; font-weight:normal }
+.txt_rap.m_type { padding-top:15px }
+.txt_rap p { padding-top:18px; font-size:15px; color:#606060 }
+.txt_rap p.type1 { font-size:14px }
+.txt_rap p:first-child { padding-top:0 }
+.cont_tit { display:block; margin-top:35px; padding:0 10px; font-size:16px; color:#303030; font-weight:normal }
+
+/*MY KIT 상품정보*/
+.list_rap { display:block; width:320px; margin:0 auto; padding-bottom:35px }
+.list_rap:after { content:''; display:block; height:0; clear:both }
+.list_rap li { position:relative; display:block; float:left; width:130px; margin:0 13px 0 17px }
+.list_rap li:nth-child(2n) { position:relative; display:block; float:left; width:130px; margin:0 17px 0 13px }
+.list_rap li .img_rap { width:100%; height:auto; }
+.list_rap li .txt_list_title { display:block; height:36px; padding-top:13px; font-size:14px; color:#303030 }
+.list_rap li.on .txt_list_title { color:#aaa }
+.list_rap li .img_cover { display:inline-block; position:absolute; top:0; left:0; width:130px; height:130px; background:url('http://img.yanoljanow.com/img/mykit/cover_m.png') no-repeat 0 0; background-size:130px; z-index:10 }
+.list_rap li #imgCover { display:none } 
+.list_rap li.on #imgCover { display:block; position:absolute; top:0; left:0; width:130px; height:130px; background:url('http://img.yanoljanow.com/img/mykit/bg_cover_color.png') no-repeat 0 0; background-size:130px }
+.list_rap li.on #imgCover span { display:inline-block; position:absolute; top:50%; left:50%; width:62px; padding:7px 11px; margin-top:-14px; margin-left:-42px; font-size:15px; color:#fff; line-height:1; border:solid 1px #fff; -webkit-border-radius:15px; border-radius:15px }
+
+/*상품평가*/
+/*circle 이미지*/
+.img_rap.appr { position:relative; width:175px; height:175px; margin:0 auto }
+.img_rap.appr .img_cover { display:inline-block; position:absolute; top:30px; left:0; width:175px; height:175px; background:url('http://img.yanoljanow.com/img/mykit/cover_l.png') no-repeat 0 0; background-size:175px; z-index:10 }
+.img_rap .ico_more { position:absolute; display:inline-block; width:25px; height:25px; top:169px; left:138px; background:url("http://img.yanoljanow.com/img/mykit/ico_more.png")no-repeat 0 0; background-size:25px 25px; z-index:20 }
+
+/*버튼 타입*/
+.btn_rap { margin-top:35px }
+.btn_rap .btn_inner {  }
+.btn_rap .btn { display:block; padding:15px 0 14px 0; margin:10px 5px 0 5px; font-size:16px; color:#fff; line-height:1; -webkit-border-radius:23px; border-radius:23px }
+.btn_rap .btn:first-child { margin-top:0 }
+.btn_rap .btn.type1 { margin-top:-5px; background:#ff5e80 }
+.btn_rap .btn.type2 { /*margin-top:0;*/ color:#ff5e80; font-size:15px; background:#fff }
+.btn_rap.gender .btn.type2 { border:solid 1px #ff5e80 }
+.btn_rap .btn_inner ul { display:block }
+.btn_rap .btn_inner ul:after { content:''; display:block; height:0; clear:both }
+.btn_rap .btn_inner ul.type1 { margin-top:-10px; }
+.btn_rap .btn_inner ul.type2 { margin:0; padding:8px 0; font-size:0 }
+.btn_rap .btn_inner ul li { display:block; width:100% }
+.btn_rap .btn_inner ul.type1 li{ float:left; width:50% }
+.btn_rap .btn_inner ul.type2 li { display:inline-block; *display:inline; *zoom:1; width:95px; height:30px; margin:0 5px }
+.btn_rap .btn_inner ul.type2 li a { padding:8px 0 5px 0; margin:0 }
+.btn_rap .btn_inner li { margin-top:10px }
+.btn_rap .btn_inner li .btn { margin-top:0 }
+.btn_rap .btn_inner li.on .btn.type2 { color:#fff; background:#ff5e80 }
+
+.btn_rap .btn_inner ul.type3 { padding:0 10px 0 }
+.btn_rap .btn_inner ul.type3 li { position:relative; margin-top:15px; }
+.btn_rap .btn_inner ul.type3 li:first-child { margin-top:0 }
+.btn_rap .btn_inner ul.type3 li label { display:block; padding-left:35px; color:#606060; font-size:16px; line-height:25px; text-align:left; vertical-align:middle; background:url('http://img.yanoljanow.com/img/mykit/ico_checked.png') no-repeat 0 0; background-size:25px 51px; overflow:hidden; text-overflow:ellipsis;white-space:nowrap;word-wrap:normal }
+.btn_rap .btn_inner ul.type3 li label.on { background-position:0 -26px } 
+
+.btn_rap .btn_inner ul.type4 {  }
+.btn_rap .btn_inner ul.type4 li { display:inline-block; *display:inline; *zoom:1; width:45px; height:45px; margin-top:0; margin-left:10px;  background:url('http://img.yanoljanow.com/img/mykit/bg_grade.png') no-repeat 0 0; background-size:45px 91px  }
+.btn_rap .btn_inner ul.type4 li.on { background-position:0 -46px }
+.btn_rap .btn_inner ul.type4 li:first-child { margin-left:0 }
+.btn_rap .btn_inner ul.type4 li label { display:inline-block; width:100%; padding:14px 0 8px 0; font-size:14px; color:#aaa }
+.btn_rap .btn_inner ul.type4 li.on label { color:#fff }
+
+/*상품평가 주관식*/
+.form_rap { margin-top:15px; border-top:solid 1px #eaeaea; border-bottom:solid 1px #eaeaea; background:#fff }
+.form_rap.m_type { margin-top:35px }
+.form_rap .btn_rap { margin-top:0 }
+.form_rap .btn_rap label { padding:8px 0 6px 0; margin:0 }
+.form_rap .input_rap { }
+.form_rap input { display:block; width:100%; font-size:16px; color:#606060; border:none }
+.input_rap ul {  }
+.input_rap li,
+.input_rap .input_inner { position:relative; padding:14px 15px 14px 0; margin-left:15px; border-top:solid 1px #f1f1f1; text-align:left }
+.input_rap .input_inner { margin-left:0; padding-left:15px }
+.input_rap ul li:first-child { display:block; border-top:none; padding-right:40px }
+.input_rap .btn_search { position:absolute; top:50%; right:4px; display:inline-block; width:40px; height:40px; margin-top:-20px; background:url('http://img.yanoljanow.com/img/mykit/ico_search.png') no-repeat 50%; background-size:16px; z-index:10 }
+.form_inner { padding:15px; text-align:left }
+.form_rap textarea { width:100%; height:64px; color:#606060; font-size:16px }
+
+/*상품평가 팝업*/
+#mykit_wrap.on .sc_dim { display:block; top:0; width:100%; }
+.sc_dim { position:absolute; top:-9999px; left:0; width:100%; height:100%; background:url('http://img.yanoljanow.com/img/mykit/bg_dim.png') 0 0 repeat; z-index:800 }
+
+#pop_rap { position:absolute; top:-9999px; left:0; width:100%; height:auto; text-align:center; z-index:900; overflow:hidden }
+#mykit_wrap.on #pop_rap { display:block; top:50%; margin-top:-190px }
+#pop_rap .swiper-container { min-height:100px; max-height:390px; margin:0 25px; padding:0; background:#fff; -webkit-border-radius:4px; -moz-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px; border-radius:4px; }
+#pop_rap strong { display:block; position:absolute; top:0; left:0; width:90%; padding:40px 5% 25px 5%; font-size:20px; letter-spacing:-1px; font-weight:normal; background:#fff; z-index:10 }
+#pop_rap .swiper-wrapper { width:100% !important; padding:0 !important; margin:0 auto }    
+#pop_rap .swiper-slide { font-size: 18px; height: auto; padding:92px 0 60px 0 }
+#pop_rap .swiper-slide p { display:block; padding:0 15px; margin:20px 0; font-size:14px; color:#606060; letter-spacing:-1px }
+#pop_rap .swiper-slide p:first-child { margin-top:0 }
+#pop_rap .swiper-slide a { display:block; width:100%!important; font-size:14px }
+#pop_rap .btn_rap { position:absolute; bottom:0; width:100%; height:46px; padding-top:30px; margin:0; background:#fff; z-index:10; }
+#pop_rap .btn_rap button.btn { width:100%; padding:15px 0; margin: 0 auto; color:#ff5e80; border:0; border-top:solid 1px #eaeaea; background:none; border-radius:0 }
+
+/* Etc Style */
+.keycolor { color:#ff5e80 }
+.keycolor2 { color:#19cca6 }
+.sc_out { overflow:hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px }
+
+/*우편검색 팝업*/
+#layer { height:400px!important; top:50%!important; margin-top:-200px; border:solid 1px #ddd !important; background:rgba(0,0,0,.8); z-index:999!important; -webkit-border-radius:4px; border-radius:4px; overflow:hidden }
+#btnCloseLayer { display: block; width: 100%; height:30px; font-size:0; background:#fff url("http://img.yanoljanow.com/img/mykit/ico_h_close.png")no-repeat 277px 50%; background-size:13px 13px; }
+.form_search .btn_search { z-index:900 }
+
+/* Media Query 
+****************************************************************************************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 359px) { }
+@media only screen and (min-device-width : 360px) and (max-device-width : 480px){ }
+/***************************************************************************************/
+
+/* Pixel Ratio
+****************************************************************************************/
+
+@media screen and (-webkit-device-pixel-ratio: 2){ }  
+@media screen and (-webkit-device-pixel-ratio: 3){ } 
+
+/***************************************************************************************/
+
+/* Portrait(세로) */
+@media screen and (orientation:portrait){ }
+
+/* Landscape(가로) */
+@media screen and (orientation:landscape){ }
+
+/***************************************************************************************/
+

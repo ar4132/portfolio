@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>yanolja Mykit</title> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<link rel="apple-touch-icon" href="이미지경로.png" />
+	<link rel="stylesheet" type="text/css" href="./css/default.css" />
+	<link rel="stylesheet" type="text/css" href="./css/sprite.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />	
+	<link rel="stylesheet"  type="text/css" href="./css/idangerous.swiper.css">
+</head>
+<body id="myKit" >
+	<!-- S : #skip navigation  --> 
+	<div id="skip_nav" ><a href="#content">본문 바로가기</a></div> 
+	<!-- E : #skip navigation --> 
+	<!-- S: #mykit_wrap -->
+	<div id="mykit_wrap" class="">		
+		<!-- S: #wrap -->
+		<div id="wrap">			
+			<!-- S: #header -->
+			<header id="header" class="">
+				<div class="inner">
+					<a href="#" class="btn btn_h_left"><span></span></a>
+					<h1><a href="#none" class="btn h_title"><span>카누 콜롬비아 다크로스트</span></a></h1>
+					<button type="button" class="btn btn_h_right"><span></span></button>
+				</div>
+			</header><!-- E: #header -->
+			<!-- S: #container -->
+			<div id="container" class="" >
+				<!-- S: #content -->
+				<section id="content">
+					<div class="cont_inner">
+						<div class="img_rap appr btn_show"><!-- 터치 시 팝업창(아이디 mykit_wrap에 클래스 on 추가) -->
+							<span class="img_cover"></span>
+							<button type="button" class="img_inner">
+								<img src="http://img.yanoljanow.com/img/mykit/img_list_sample_big.png" alt="제품이미지" />
+							</button>							
+							<span class="ico_more"></span>									
+						</div>	
+						<strong class="cont_tit">Q. 카페에서 주로 어떤 커피를 즐겨 드시나요?</strong>
+					</div>
+					<!-- 주관식 형-->
+					<div class="form_rap m_type">
+						<div class="form_inner">
+							<textarea placeholder="내용을 입력해주세요. (최대50자)"></textarea>
+						</div>
+					</div>
+					<div class="cont_inner">
+						<!-- 컬러 있는 가로 100% 버튼-->		
+						<div class="btn_rap">
+							<a href="#none" class="btn type1">다음</a>
+						</div>		
+					</div>
+				</section><!-- E: #content -->
+			</div><!-- E:#container -->			
+			<!-- S: #footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul>
+						<li><a href="">이용약관</a></li>
+						<li><a href="">개인정보 취급방침</a></li>
+						<li><a href="">제3자 정보제공 동의</a></li>
+					</ul>
+					<p>(주) 야놀자커머스｜대표이사 : 김종윤<br>
+					사업자 등록번호 : 211-88-93825｜통신판매업신고 : 강남 12344호<br>
+					서울시 강남구 강남대로 132길 48, 4층(논현동 56)｜now@yanolja.com</p>
+					<p class="keycolor">고객센터 : <a href="tel:1644-2349" class="keycolor">1644-2349</a> (오전 9시 ~ 익일 새벽 2시 / 365일 연중무휴)</p>
+					<p>(주)야놀자커머스는 숙박제품중개자이며, 숙박업소 운영 당사자가 아닙니다. <br>따라서 숙박업소 현장에서 일어나는 서비스에 대해서는 책임을 지지 않습니다.</p>
+					<p>ⓒ YanoljaCommerce Co.,Ltd. All rights reserved.</p>
+				</div>
+			</footer><!-- E: #footer -->			
+		</div><!-- E: #wrap -->		
+		<div id="pop_rap">
+			<div class="swiper-container">
+				<strong>카누 콜롬비아 다크로스트</strong>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">		
+						<p>세상에서 가장 작은 카페 ‘카누’<br><br>맥심이 찾아낸 최적의 비율로 블렌딩하여 더욱 조화롭고 깊은 카페 아메리카노 본연의 맛과 향을 제공합니다.</br><br>
+						원두커피의 퀄리티에 편리함을 더해 언제 어디서나 막 뽑아낸 듯한 신선한 맥심 카누를 즐겨보세요.<br><br>
+						<a href="http://goo.gl/UHrLOV" class="keycolor2" target="_blank" title="제품상세이동">http://goo.gl/UHrLOV</a></p>
+		            </div>	            
+		        </div>
+		        <!-- Add Scroll Bar -->
+		        <div class="swiper-scrollbar"></div>
+		        <div class="btn_rap">
+					<button type="button" class="btn keycolor">닫기</button>
+				</div>	
+		    </div>	    				
+		</div>
+		<div class="sc_dim"></div><!-- E: .sc_dim -->	
+	</div><!-- E: #mykit_wrap -->	
+	<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/plugins.js"></script>	
+	<script type="text/javascript" src="./js/idangerous.js"></script>
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+	        scrollbar: '.swiper-scrollbar',
+	        mode : 'vertical',
+	        slidesPerView: 'auto',
+	        mousewheelControl: true,
+	        freeMode: true
+	    });
+	</script>
+</body>
+</html>

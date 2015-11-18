@@ -1,0 +1,31 @@
+@charset "utf-8"; 
+
+/* Reset */
+html,body { margin:0; padding:0; background:#fff }
+img { border:0 none; -ms-interpolation-mode:bicubic; vertical-align:top }
+a { display:inline-block; *display:inline; zoom:1; text-decoration:none }
+a:link,a:visited { text-decoration:none }
+a:active,a:hover,a:focus { outline:0; text-decoration:none }
+#wrap { width:100%; min-width:1460px; margin:0 auto; text-align:center; font-size:0 }
+#contents { width:100%; height:772px; background: #593977 url('http://image2.yanolja.com/event_img/20151015/pw_bg.png') no-repeat center 0 }
+.btn_group a:first-child { margin-right:30px }
+#footer { z-index:99; position:relative; top:-8px; width:100%; min-width:1460px; margin:0 auto; height:114px; padding:25px 0; background: url('http://image2.yanolja.com/event_img/20151015/pw_bg_footer.png') repeat-x }
+#footer p { width:1370px; margin:0 auto; padding-left:90px }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

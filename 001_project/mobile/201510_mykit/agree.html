@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>yanolja Mykit</title> 
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<link rel="apple-touch-icon" href="이미지경로.png" />
+	<link rel="stylesheet" type="text/css" href="./css/default.css" />
+	<link rel="stylesheet" type="text/css" href="./css/sprite.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body id="myKit">
+	<!-- S : #skip navigation  --> 
+	<div id="skip_nav" ><a href="#content">본문 바로가기</a></div> 
+	<!-- E : #skip navigation --> 
+	<!-- S: #mykit_wrap -->
+	<div id="mykit_wrap">		
+		<!-- S: #wrap -->
+		<div id="wrap" class="fixed">
+			<!-- S: #header -->
+			<header id="header" class="">
+				<div class="inner">	
+					<h1><a href="#none" class="btn h_title"><span>정보 동의</span></a></h1>
+					<button type="button" class="btn btn_h_right"><span></span></button>
+				</div>
+			</header><!-- E: #header -->
+			<!-- S: #container -->
+			<div id="container" class="" >
+				<!-- S: #content -->
+				<section id="content">
+					<div class="txt_rap">
+						<p>MY KIT 평가가 완료되면,<br>추첨을 통하여 추가 제품을 드립니다.</p>
+					</div>
+					<div class="form_rap m_type">
+						<div class="btn_rap gender">
+							<div class="btn_inner">
+								<ul class="type2">
+									<li><input type="radio" id="gender1" name="gender"><label class="btn type2" for="gender1">남자</label></li>
+									<li><input type="radio" id="gender2" name="gender"><label class="btn type2" for="gender2">여자</label></li>
+								</ul>								
+							</div>
+						</div>
+						<div class="input_rap">
+							<div class="input_inner">
+								<input type="tel" placeholder="나이 입력" />
+							</div>
+						</div>
+					</div>
+					<div class="form_rap">
+						<div class="input_rap">
+							<ul>
+								<li><input type="text" placeholder="우편번호"><button type="button" class="btn_search"></button></li>
+								<li><input type="text" placeholder="기본주소 입력"></li>
+								<li><input type="text" placeholder="상세주소 입력"></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="form_rap">
+						<div class="form_inner">
+							<input type="tel" placeholder="전화번호 입력" />
+ 						</div>					
+					</div>
+					<div class="cont_inner">
+						<div class="btn_rap">
+							<a href="" class="btn type1" target="_blank">네, 동의합니다</a>
+						</div>
+						<div class="txt_rap m_type">
+							본 정보 동의는 MY KIT의 평가에 이용되며 제품을<br>추가로 받기를 원하는 경우 제3자에게 제공되며,<br>이벤트 외의 목적으로 이용되지 않습니다.
+						</div>
+					</div>
+				</section><!-- E: #content -->
+			</div><!-- E:#container -->
+		</div><!-- E: #wrap -->		
+		<div class="sc_dim"></div><!-- E: .sc_dim -->	
+	</div><!-- E: #mykit_wrap -->
+	<script type="text/javascript" src="./js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+</body>
+</html>
